@@ -32,3 +32,19 @@ def reformattedProblem3():
     output = ('{name} the {animal} is {age} years old'
         .format(animal=animal, name=name, age=age))
     return output
+
+"""
+Problem 4:
+Method that takes 3 numbers as input and finds the minimum
+of the three without using the built-in min function
+"""
+def findMin(first, second, third):
+    if not (isinstance(first, numbers.Real) \
+       and isinstance(second, numbers.Real) \
+       and isinstance(third, numbers.Real)):
+        raise TypeError("inputs to findMin() must be numbers")
+    if first < second and first < third:
+        return first
+    if second < first and second < third:
+        return second
+    return third
