@@ -2,21 +2,25 @@ class MyList:
     def __init__(self):
         self.itemFreq = {}
 
+    # Adds input list of items to dictionary
     def addList(self, inputList):
-        for ele in inputList:
-            if ele in self.itemFreq:
-                self.itemFreq[ele] += 1
+        for item in inputList:
+            if item in self.itemFreq:
+                self.itemFreq[item] += 1
             else:
-                self.itemFreq[ele] = 1
+                self.itemFreq[item] = 1
 
+    # Returns all the unique items from the dictionary
     def getUnique(self):
         return self.itemFreq.keys()
 
+    # Returns all the items and their frequency from the dictionary
     def getFreqAll(self):
         return self.itemFreq
 
-    def add(self, element):
-        if element in self.itemFreq:
-            self.itemFreq[element] += 1
+    # Adds input item to dictionary
+    def add(self, item):
+        if item in self.itemFreq:
+            self.itemFreq[item] += 1
         else:
-            self.itemFreq[element] = 1
+            self.itemFreq[item] = 1
