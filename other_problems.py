@@ -1,3 +1,5 @@
+import numbers
+
 """
 Problem 2:
 Takes string as input. Output to be int/float/string depending
@@ -14,3 +16,19 @@ def convert(input):
         return floatVal
     except ValueError:
         return input
+
+"""
+Problem 3:
+Reformatting this code to be more elegant
+    abc = ['dog', 'Fido', 10]
+    animal = abc[0]
+    name = abc[1]
+    age = abc[2]
+    output = ('{name} the {animal} is {age} years old'.format(
+    animal=animal, name=name, age=age))
+"""
+def reformattedProblem3():
+    animal, name, age = ['dog', 'Fido', 10]
+    output = ('{name} the {animal} is {age} years old'
+        .format(animal=animal, name=name, age=age))
+    return output
