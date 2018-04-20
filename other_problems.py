@@ -9,7 +9,7 @@ def convert(input):
     if type(input) != type(""):
         raise TypeError("convert() expected input of " + str(type(''))
         + " but was provided input of " + str(type(input)))
-        
+
     try:
         floatVal = float(input)
         if '.' not in input:
@@ -77,9 +77,3 @@ def apply_operation(left_operand, right_operand, operator):
            '*': oper.mul,
            '/': oper.div}
     return ops[operator](left_operand, right_operand)
-
-def main():
-    print (apply_operation(3, 4, '*'))
-
-if __name__ == "__main__":
-    main()
